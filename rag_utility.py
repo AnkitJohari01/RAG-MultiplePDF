@@ -60,7 +60,7 @@ def process_documents_to_chroma_db(file_names: list[str]) -> int:
             continue
 
         # Load PDF
-        loader = UnstructuredPDFLoader(file_path)
+        loader = PyPDFLoader(file_path)
         documents = loader.load()
 
         # Tag each document chunk with the source file name
